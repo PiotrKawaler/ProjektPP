@@ -82,8 +82,14 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("IsGrounded",playerAnimatorController.IsGrounded());
 
 
-        bool isWalking = myRigidbody.velocity.sqrMagnitude > walkingSpeedTreshold * walkingSpeedTreshold;
+        bool isWalking = Mathf.Abs( myRigidbody.velocity.x )>  walkingSpeedTreshold;
+
         animator.SetBool("IsWalking", isWalking);
+
+        if (isWalking)
+        {
+            animator.SetBool("isFlipped", myRigidbody.velocity.x < 0);
+        }
 
     }
 }
