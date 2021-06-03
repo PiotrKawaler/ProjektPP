@@ -10,13 +10,13 @@ public class TilemapColorSwitcher : ColorSwitcher
 
     Tilemap tilemap;
 
-    private void Awake()
-    {
-        tilemap = GetComponent<Tilemap>();
-    }
 
     protected override void SetTargetToColor(Color color)
     {
+        if (tilemap == null)
+        {
+            tilemap = GetComponent<Tilemap>();
+        }
         tilemap.color = color;
     }
 

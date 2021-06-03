@@ -7,12 +7,12 @@ using UnityEngine;
 public class CameraColorSwitcher : ColorSwitcher
 {
     Camera myCamera;
-    private void Awake()
-    {
-        myCamera = GetComponent<Camera>();
-    }
     protected override void SetTargetToColor(Color color)
     {
+        if (myCamera == null)
+        {
+            myCamera = GetComponent<Camera>();
+        }
         myCamera.backgroundColor = color;
     }
 }
