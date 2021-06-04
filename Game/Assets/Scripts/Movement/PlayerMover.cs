@@ -63,7 +63,7 @@ public class PlayerMover : MonoBehaviour, IPlayerAnimatorController
     {
         Collider2D  ground =  Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, groundLayers);
 
-        isGrounded = ground != null&& myRigidbody.velocity.y<=0;
+        isGrounded = ground != null&& myRigidbody.velocity.y<=0.02;
 
         myRigidbody.velocity = new Vector2(movementInput * speed, myRigidbody.velocity.y);
 

@@ -11,26 +11,28 @@ public class GradientColorSampler : ColorSampler
     [SerializeField] ColorSwitchMode clolorSwitchMode = ColorSwitchMode.BackAndForward;
     [SerializeField] float switchPeriod = 12.0f;
 
-    public override Color GetCurrentColor()
+
+    public override float GetCurrentSample()
     {
-        Color color;
+        float sample;
 
         switch (clolorSwitchMode)
         {
             case ColorSwitchMode.BackAndForward:
-                color = GetColorfForBackAndForward();
+                sample = GetSamplefForBackAndForward();
                 break;
             case ColorSwitchMode.Loop:
-                color = GetColorfForLoop();
+                sample = GetSamplefForLoop();
                 break;
             case ColorSwitchMode.ConstBegin:
-                color = gradient.Evaluate(0);
+                sample = 0;
                 break;
             default:
-                color = Color.black;
+                Debug.LogError($"Uncovered {nameof(ColorSwitchMode)} switch statemnet");
+                sample = 0;
                 break;
         }
-        return color;
+        return sample;
     }
 
     public override Color SampleColor(float sample)
@@ -38,7 +40,7 @@ public class GradientColorSampler : ColorSampler
         return gradient.Evaluate(sample);
     }
 
-    Color GetColorfForBackAndForward()
+    float GetSamplefForBackAndForward()
     {
         float sample = Time.time / (switchPeriod * 2);
         sample -= Mathf.Floor(sample);
@@ -49,17 +51,17 @@ public class GradientColorSampler : ColorSampler
             sample = 2.0f - sample;
         }
 
-        return gradient.Evaluate(sample);
+        return sample;
 
 
     }
 
-    Color GetColorfForLoop()
+    float GetSamplefForLoop()
     {
         float sample = Time.time / switchPeriod;
         sample -= Mathf.Floor(sample);
 
-        return gradient.Evaluate(sample);
+        return sample;
 
     }
 
