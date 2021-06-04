@@ -17,32 +17,38 @@ public abstract class ColorSwitcher : MonoBehaviour
 {
 
     public Color defaultColor = Color.white;
+
+    public IColorSampler currentSampler { get  { return (IColorSampler)samplerBehaviour ?? sampler; } }
+
     public ColorSampler sampler;
-  
+    public ColorSamplerBehaviour samplerBehaviour;
+
+
+
     protected abstract void SetTargetToColor(Color color);
 
 
     public void OnPrviewButton() {
-        if (sampler == null)
+        if (currentSampler == null)
         {
             SetTargetToColor(defaultColor);
         }
         else
         {
-            SetTargetToColor(sampler.SampleColor(0));
+            SetTargetToColor(currentSampler.SampleColor(0));
         }
     }
 
     private void Update()
     {
 
-        if (sampler==null)
+        if (currentSampler == null)
         {
             SetTargetToColor(defaultColor);
         }
         else
         {
-            SetTargetToColor(sampler.GetCurrentColor());
+            SetTargetToColor(currentSampler.GetCurrentColor());
         }
         
 

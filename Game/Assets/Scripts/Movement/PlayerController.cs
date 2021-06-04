@@ -5,14 +5,18 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(PlayerMover))]
+[RequireComponent(typeof(OrbGun))]
 public class PlayerController : MonoBehaviour
 {
 
     PlayerMover playerMover;
+    OrbGun orbGun;
+
 
     private void Awake()
     {
         playerMover = GetComponent<PlayerMover>();
+        orbGun = GetComponent<OrbGun>();
     }
 
 
@@ -25,6 +29,10 @@ public class PlayerController : MonoBehaviour
 
         playerMover.ReadInputs(horizontal, jumpPressed);
 
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            orbGun.ShootOrb();
+        }
 
 
     }

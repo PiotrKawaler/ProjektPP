@@ -13,6 +13,11 @@ public class ConstantColorSampler : ColorSampler
         return color;
     }
 
+    public override float GetCurrentSample()
+    {
+        return 0;
+    }
+
     public override Color SampleColor(float sample)
     {
         return color;
