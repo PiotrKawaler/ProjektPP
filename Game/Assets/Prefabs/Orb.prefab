@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbSlotLerpSpeed: 14
-  orbShootLerpSpeed: 18
-  orbShootTriggerRadius: 0.1
+  orbShootLerpSpeed: 16
+  orbShootTriggerRadius: 0.2
 --- !u!50 &6118711841953194015
 Rigidbody2D:
   serializedVersion: 4
