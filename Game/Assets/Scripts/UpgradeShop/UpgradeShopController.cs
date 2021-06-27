@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class UpgradeShopController : MonoBehaviour
 {
-    public String MainSceneName = "test";
-
     [SerializeField]
     private Text HealthText;
 
@@ -27,6 +25,8 @@ public class UpgradeShopController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.gameObject.SetActive(false);
+
         HealthText.text = PlayerStats.MaxHealth.ToString();
         SpeedText.text = PlayerStats.MovementSpeed.ToString();
         DamageText.text = PlayerStats.Damage.ToString();
@@ -83,9 +83,24 @@ public class UpgradeShopController : MonoBehaviour
 
     public void ExitUpgradeShop()
     {
-        SceneManager.LoadScene(MainSceneName);
+        Time.timeScale = 1f;
+        SetOtherUIActiveStatus(true);
+        this.gameObject.SetActive(false);        
     }
 
 
-
+    public void SetOtherUIActiveStatus(bool status)
+    {
+        GameObject Parent = transform.parent.gameObject;
+        int ChildCount = Parent.transform.childCount;
+        
+        for(int i = 0; i < ChildCount; i++)
+        {
+            Transform _child = Parent.transform.GetChild(i);
+            if(_child != this.gameObject)
+            {
+                _child.gameObject.SetActive(status);
+            }
+        }
+    }
 }

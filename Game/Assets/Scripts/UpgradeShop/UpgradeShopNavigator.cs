@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class UpgradeShopNavigator : MonoBehaviour
 {
     [SerializeField]
-    private string UpgradeShopSceneName = "UpgradeShopScene";
+    private GameObject UpgradeShopPanel;
     private bool interactionAllowed = false;
 
 
     void Update()
     {
         if (interactionAllowed && Input.GetKeyDown(KeyCode.F))
-            GotoUpgradeShop();
+            OpenUpgradePanel();
     }
 
 
@@ -34,8 +34,10 @@ public class UpgradeShopNavigator : MonoBehaviour
     }
 
 
-    private void GotoUpgradeShop()
+    private void OpenUpgradePanel()
     {
-        SceneManager.LoadScene(UpgradeShopSceneName);
+        Time.timeScale = 0f;
+        UpgradeShopPanel.GetComponent<UpgradeShopController>().SetOtherUIActiveStatus(false);
+        UpgradeShopPanel.SetActive(true);
     }
 }
