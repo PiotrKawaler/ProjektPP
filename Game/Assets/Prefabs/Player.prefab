@@ -368,9 +368,10 @@ GameObject:
   - component: {fileID: 337602047086177971}
   - component: {fileID: 337602047086177980}
   - component: {fileID: 1016412179728132016}
+  - component: {fileID: 4435126803448251543}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,6 +550,18 @@ MonoBehaviour:
   orbPrefab: {fileID: 2189015230918421332, guid: 11863db50346d714095bbbc3b3c22d42, type: 3}
   orbit: {fileID: 3941870188737664481}
   orbShootSource: {fileID: 4852133694772494993}
+--- !u!114 &4435126803448251543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337602047086177977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19dc18bed6c2c24b9fdb76974faccf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &337602047109138063
 GameObject:
   m_ObjectHideFlags: 0
