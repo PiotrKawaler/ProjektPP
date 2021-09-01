@@ -154,6 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadab4ea88f732c49a8bcd6817ed0127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePacket:
+    damageAmount: 0
+    damageType: 0
   orbSlotLerpSpeed: 8
   orbShootLerpSpeed: 15
   orbShootTriggerRadius: 0.3
@@ -268,6 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadab4ea88f732c49a8bcd6817ed0127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePacket:
+    damageAmount: 0
+    damageType: 0
   orbSlotLerpSpeed: 8
   orbShootLerpSpeed: 15
   orbShootTriggerRadius: 0.3
@@ -625,6 +631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadab4ea88f732c49a8bcd6817ed0127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePacket:
+    damageAmount: 0
+    damageType: 0
   orbSlotLerpSpeed: 8
   orbShootLerpSpeed: 15
   orbShootTriggerRadius: 0.3
@@ -853,6 +862,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadab4ea88f732c49a8bcd6817ed0127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePacket:
+    damageAmount: 0
+    damageType: 0
   orbSlotLerpSpeed: 8
   orbShootLerpSpeed: 15
   orbShootTriggerRadius: 0.3
@@ -6733,6 +6745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadab4ea88f732c49a8bcd6817ed0127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePacket:
+    damageAmount: 0
+    damageType: 0
   orbSlotLerpSpeed: 8
   orbShootLerpSpeed: 15
   orbShootTriggerRadius: 0.3
