@@ -8,18 +8,19 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Orb : MonoBehaviour
 {
-    
+
+    public DamagePacket damagePacket;
+
+    //Prêtkoœæ gonienia za slotem
     public float orbSlotLerpSpeed =15;
 
-   
-
-
-    
+    //Prêdkoœæ do Ÿrud³a wystrza³u
     public float orbShootLerpSpeed = 15;
     public float orbShootTriggerRadius = 0.3f;
 
 
-    private float orbShootStrength;
+    //Si³a wystrza³u
+    private float orbShootStrength; 
 
     private Transform orbShootSource;
     private ColorSwitcher colorSwitcher;
