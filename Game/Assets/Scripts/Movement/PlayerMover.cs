@@ -17,7 +17,8 @@ public class PlayerMover : MonoBehaviour, IPlayerAnimatorController
 
 
     [Header("Masks")]
-    public LayerMask groundLayers;
+    [SerializeField]private LayerMask groundLayers;
+    public LayerMask GroundLayers { get => groundLayers; }
 
     [Header("Tweaks")]
     [SerializeField] private float groundCheckRadius=0.2f;
