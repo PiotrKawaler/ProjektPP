@@ -29,6 +29,7 @@ public class AgroController : MonoBehaviour
         int flagResult = (int)agroFilter & (int)otherIdentifier.Identity;
         if (flagResult != 0)
         {
+
             onAggroEvent?.Invoke(otherIdentifier.gameObject);
         }
 
