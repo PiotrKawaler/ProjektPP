@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522898657613634581}
   - component: {fileID: 1522898657613634582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1522898658364417721}
   - component: {fileID: 1522898658364417722}
   - component: {fileID: 2394097337011191196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AgroBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 14
 --- !u!114 &2394097337011191196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +349,9 @@ GameObject:
   - component: {fileID: 1522898658558554650}
   - component: {fileID: 1522898658558554649}
   - component: {fileID: 5315546965039485767}
+  - component: {fileID: 8046199112886844275}
+  - component: {fileID: 2762794720321235637}
+  - component: {fileID: 7767324985822510108}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -470,3 +473,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identity: 2
+--- !u!114 &8046199112886844275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522898658558554654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e04c5ccb530fbe4cb8124e61b44bfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+--- !u!114 &2762794720321235637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522898658558554654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7ed3560fc1960498cfa017f61308f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reciveDamageFlags: 1
+--- !u!114 &7767324985822510108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522898658558554654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a34e8a4bff825946ab1be137c591b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cleanupTime: 0
