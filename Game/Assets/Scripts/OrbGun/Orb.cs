@@ -6,7 +6,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class Orb : MonoBehaviour
+public class Orb : MonoBehaviour,IDamageSource
 {
 
     public DamagePacket damagePacket;
@@ -27,8 +27,19 @@ public class Orb : MonoBehaviour
     private OrbSlot orbSlot;
     private Rigidbody2D myRigidbody;
     private Collider2D myCollider;
-    
-    
+
+
+
+    public Vector2 GetDamagePosition()
+    {
+        return this.transform.position;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return this.gameObject;
+    }
+
 
     private void Awake()
     {
@@ -36,6 +47,20 @@ public class Orb : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DamageRecieverBase damageReciever = collision?.attachedRigidbody?.GetComponent<DamageRecieverBase>();
+
+        if (damageReciever == null) return;
+
+        if (damageReciever.IsValidTarget(damagePacket, this))
+        {
+            damageReciever.ReciveDamage(damagePacket, this);
+            Destroy(gameObject);
+        }
+    }
+
 
     public void UnsubscribeFromOrbslot()
     {
@@ -118,6 +143,5 @@ public class Orb : MonoBehaviour
 
     }
 
-    
-
+   
 }
