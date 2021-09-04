@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 5175449896086154174}
   - component: {fileID: 4452708316528150115}
   - component: {fileID: 6559741846963999071}
+  - component: {fileID: 4403322371554649351}
+  - component: {fileID: 6627758969460916399}
   m_Layer: 6
   m_Name: Flyer
   m_TagString: Untagged
@@ -135,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7ed3560fc1960498cfa017f61308f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reciveDamageFlags: 1
+  reciveDamageFlags: 9
 --- !u!114 &6559741846963999071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +152,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 0}
   knockbackBaseStrength: 5
+--- !u!114 &4403322371554649351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175449896086154144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e04c5ccb530fbe4cb8124e61b44bfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+--- !u!114 &6627758969460916399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175449896086154144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a34e8a4bff825946ab1be137c591b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cleanupTime: 0
 --- !u!1 &5175449896313265085
 GameObject:
   m_ObjectHideFlags: 0

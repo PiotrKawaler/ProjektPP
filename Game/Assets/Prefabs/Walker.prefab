@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 489843532009651706}
   - component: {fileID: 8828857275866619603}
   - component: {fileID: -112485976394097732}
+  - component: {fileID: 5950736056691407462}
+  - component: {fileID: 5022341211971674390}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Player
@@ -290,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7ed3560fc1960498cfa017f61308f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reciveDamageFlags: 0
+  reciveDamageFlags: 9
 --- !u!114 &-112485976394097732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +307,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 7194923207459086131}
   knockbackBaseStrength: 5
+--- !u!114 &5950736056691407462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438821929994333395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e04c5ccb530fbe4cb8124e61b44bfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 10
+--- !u!114 &5022341211971674390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438821929994333395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a34e8a4bff825946ab1be137c591b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cleanupTime: 0
 --- !u!1 &2438821930154693058
 GameObject:
   m_ObjectHideFlags: 0

@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 2574738209306034064}
   - component: {fileID: 7864492400492684322}
   - component: {fileID: 5243024565472271762}
+  - component: {fileID: 9185512850371863483}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -549,8 +550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxOrbCount: 15
   SlotCount: 15
-  OrbRespawnCooldown: 3
-  OrbShootStrength: 6
+  OrbRespawnCooldown: 0.8
+  OrbShootStrength: 12
   orbPrefab: {fileID: 2189015230918421332, guid: 11863db50346d714095bbbc3b3c22d42, type: 3}
   orbit: {fileID: 3941870188737664481}
   orbShootSource: {fileID: 4852133694772494993}
@@ -606,6 +607,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 1239345050706127385}
   knockbackBaseStrength: 9
+--- !u!114 &9185512850371863483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337602047086177977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401b21d75f9c995418f80b19a171ba01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbFireSource: {fileID: 4852133694772494993}
 --- !u!1 &337602047109138063
 GameObject:
   m_ObjectHideFlags: 0
