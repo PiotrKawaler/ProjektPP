@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7ed3560fc1960498cfa017f61308f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reciveDamageFlags: 9
+  reciveDamageFlags: 13
 --- !u!114 &-112485976394097732
 MonoBehaviour:
   m_ObjectHideFlags: 0
