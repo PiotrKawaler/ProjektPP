@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7046322087895692365}
   - component: {fileID: 7046322087895692364}
   - component: {fileID: 4576923645092381799}
+  - component: {fileID: -7271067017835181410}
   m_Layer: 10
   m_Name: TurretProjectile
   m_TagString: Untagged
@@ -137,3 +138,16 @@ MonoBehaviour:
   damagePacket:
     damageAmount: 5
     damageType: 10
+--- !u!114 &-7271067017835181410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046322087895692367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5939b37720007234b9270bb6f4674d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 7398047383977029166, guid: fb8dee9837f648a4bb1a5ed1fa5b1c36, type: 3}
