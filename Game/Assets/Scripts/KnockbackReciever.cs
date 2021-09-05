@@ -48,15 +48,18 @@ public class KnockbackReciever : MonoBehaviour
         Vector2 forcedir = (Vector2)baseTransform.position - source.GetDamagePosition();
 
         forcedir.Normalize();
-        forcedir *= knockbackBaseStrength;
+        
+
+        Vector2 knockBackVector = (forcedir * 0.3f + Vector2.up * 0.7f) * knockbackBaseStrength;
+
 
         if (rigidbody2d.isKinematic)
         {
-            rigidbody2d.velocity += forcedir;
+            rigidbody2d.velocity += knockBackVector;
         }
         else
         {
-            rigidbody2d.AddForce(forcedir, ForceMode2D.Impulse);
+            rigidbody2d.AddForce(knockBackVector, ForceMode2D.Impulse);
         }
 
         
