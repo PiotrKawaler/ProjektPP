@@ -8,20 +8,19 @@ using UnityEngine.SceneManagement;
 public class UpgradeShopController : MonoBehaviour
 {
 
-    
-    [SerializeField]
-    private OrbGun orbGunScript;
-
     [SerializeField]
     private Text MaxOrbCountText;
+
     public int MaxOrbCountUpgrade = 1;
 
     [SerializeField]
     private Text OrbShootStrengthText;
+
     public float OrbShootStrengthMultiplierUpgrade = 1.5f;
 
     [SerializeField]
     private Text OrbRespawnCooldownText;
+
     public float OrbRespawnCooldownMultiplierUpgrade = 0.8f;
 
     [SerializeField]
@@ -30,14 +29,15 @@ public class UpgradeShopController : MonoBehaviour
     [SerializeField]
     private int UpgradeCost = 3;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         this.gameObject.SetActive(false);
-        OrbGun.
-        MaxOrbCountText.text = orbGunScript.MaxOrbCount.ToString();
-        OrbShootStrengthText.text = orbGunScript.OrbShootStrength.ToString();
-        OrbRespawnCooldownText.text = orbGunScript.OrbRespawnCooldown.ToString();
+        MaxOrbCountText.text = OrbGun.MaxOrbCount.ToString();
+        OrbShootStrengthText.text = OrbGun.OrbShootStrength.ToString();
+        OrbRespawnCooldownText.text = OrbGun.OrbRespawnCooldown.ToString();
     }
 
     // Update is called once per frame
@@ -51,8 +51,8 @@ public class UpgradeShopController : MonoBehaviour
     {
         if (TryBuyUpgrade())
             {
-                orbGunScript.MaxOrbCount += MaxOrbCountUpgrade;
-                MaxOrbCountText.text = orbGunScript.MaxOrbCount.ToString();
+                OrbGun.MaxOrbCount += MaxOrbCountUpgrade;
+                MaxOrbCountText.text = OrbGun.MaxOrbCount.ToString();
             }
     }
 
@@ -61,8 +61,8 @@ public class UpgradeShopController : MonoBehaviour
     {
         if (TryBuyUpgrade())
             {
-                orbGunScript.OrbShootStrength *= OrbShootStrengthMultiplierUpgrade;
-                OrbRespawnCooldownText.text = orbGunScript.OrbShootStrength.ToString();
+                OrbGun.OrbShootStrength *= OrbShootStrengthMultiplierUpgrade;
+                OrbShootStrengthText.text = OrbGun.OrbShootStrength.ToString();
             }
     }
 
@@ -71,8 +71,8 @@ public class UpgradeShopController : MonoBehaviour
     {
         if (TryBuyUpgrade())
             {
-                orbGunScript.OrbRespawnCooldown *= OrbRespawnCooldownMultiplierUpgrade;
-                OrbShootStrengthText.text = orbGunScript.OrbRespawnCooldown.ToString();
+                OrbGun.OrbRespawnCooldown *= OrbRespawnCooldownMultiplierUpgrade;
+                OrbRespawnCooldownText.text = OrbGun.OrbRespawnCooldown.ToString();
             }
     }
 

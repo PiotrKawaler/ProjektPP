@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UpgradeShopScene.unity
     guid: 2f43ee07a9595da4ba43ae695258ad64
   - enabled: 1
-    path: Assets/Scenes/test.unity
+    path: Assets/Scenes/Upgrade_Shop.unity
     guid: 5adefe1b2aca88c49bb9f7494816c937
   m_configObjects: {}

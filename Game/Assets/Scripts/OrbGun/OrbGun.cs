@@ -5,10 +5,10 @@ using System.Linq;
 public class OrbGun : MonoBehaviour
 {
     [Header("Settings")]
-    public int MaxOrbCount = 3;
+    public static int MaxOrbCount = 3;
     public int SlotCount=15;
-    public float OrbRespawnCooldown=1.5f;
-    public float OrbShootStrength = 6;
+    public static float OrbRespawnCooldown=1.5f;
+    public static float OrbShootStrength = 6;
 
 
     [Header("Refrences")]
