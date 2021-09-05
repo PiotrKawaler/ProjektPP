@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 1239345050706127385}
-  knockbackBaseStrength: 9
+  knockbackBaseStrength: 3
 --- !u!114 &9185512850371863483
 MonoBehaviour:
   m_ObjectHideFlags: 0
