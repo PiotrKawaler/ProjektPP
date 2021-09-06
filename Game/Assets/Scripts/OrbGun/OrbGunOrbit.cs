@@ -32,7 +32,7 @@ public class OrbGunOrbit : MonoBehaviour
         {
             var child = transform.GetChild(0);
             child.parent = null;
-            DestroyImmediate(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
     private OrbSlot setupSlot(int index)

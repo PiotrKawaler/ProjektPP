@@ -17,5 +17,16 @@ public class OrbSlot : RotationHsvSampler
         linkedOrb = null;
     }
 
+    private void OnDestroy()
+    {
+        if (linkedOrb != null)
+        {
+            Orb orb = linkedOrb;
+            linkedOrb.UnsubscribeFromOrbslot();
+            Destroy(orb.gameObject);
+        }
+        
+    }
+
 
 }
