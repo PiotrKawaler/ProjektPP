@@ -8,7 +8,7 @@ public class HitEffectHandler : MonoBehaviour
     public GameObject hitEffect;
     public bool pickProjectileColor = true;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D other)
     {
         hitEffectPlay();
     }

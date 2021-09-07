@@ -182,4 +182,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7398047383977029166, guid: fb8dee9837f648a4bb1a5ed1fa5b1c36, type: 3}
-  pickProjectileColor: 1
+  pickProjectileColor: 0
