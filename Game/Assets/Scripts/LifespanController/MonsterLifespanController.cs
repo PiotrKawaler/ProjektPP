@@ -11,7 +11,8 @@ public class MonsterLifespanController : MonoBehaviour
     private void Awake()
     {
         deathEventCaller = GetComponent<IDeathEventCaller>();
-        deathEventCaller.DeathEvent += OnDeath;
+        if(deathEventCaller!=null)
+            deathEventCaller.DeathEvent += OnDeath;
     }
 
     void OnDeath()

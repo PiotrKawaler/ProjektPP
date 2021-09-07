@@ -5,6 +5,12 @@ namespace WallToggling
 {
     public class WallToggle : MonoBehaviour
     {
+        [Header("Visual")]
+        [SerializeField] SpriteRenderer spriteRenderer;
+        [SerializeField] Sprite onSprite;
+        [SerializeField] Sprite offSprite;
+
+        [Header("Setings")]
         [SerializeField] private float reenableDelay;
         [SerializeField] private Wall[] walls;
         
