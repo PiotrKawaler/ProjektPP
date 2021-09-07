@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePacket:
-    damageAmount: 5
+    damageAmount: 2
     damageType: 9
   orbSlotLerpSpeed: 14
   orbShootLerpSpeed: 21
