@@ -47,4 +47,9 @@ public class ChestScript : MonoBehaviour
         isEmpty = true;
     }
 
+    public bool IsEmpty()
+    {
+        return isEmpty;
+    }
+
 }
