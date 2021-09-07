@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour
 {
-
+    
     public GameObject itemPrefab;
 
     public bool isEmpty = false;
@@ -43,6 +43,7 @@ public class ChestScript : MonoBehaviour
     {
         GameObject item = Instantiate(itemPrefab, transform.position, Quaternion.identity);
         item.transform.localScale = transform.localScale;
+        GetComponent<Animator>()?.SetBool("IsOpen", true);
         isEmpty = true;
     }
 

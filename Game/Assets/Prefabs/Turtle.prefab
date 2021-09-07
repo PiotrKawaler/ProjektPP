@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2744002247817826370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8211275711491383311}
+  - component: {fileID: 3415322136736563992}
+  - component: {fileID: 3043909363919504860}
+  m_Layer: 11
+  m_Name: ContactDamager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8211275711491383311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744002247817826370}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7815615146168975850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &3415322136736563992
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744002247817826370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.020486023, y: 0.20349915}
+  m_Size: {x: 0.86615753, y: 0.39893675}
+  m_Direction: 1
+--- !u!114 &3043909363919504860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744002247817826370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfcce4f38eada742aed0b7e098db1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colider: {fileID: 0}
+  damagePacket:
+    damageAmount: 5
+    damageType: 2
 --- !u!1 &7815615146168975851
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,8 +74,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7815615146168975850}
   - component: {fileID: 7815615146168975855}
-  - component: {fileID: 7815615146168975852}
   - component: {fileID: 7815615146168975854}
+  - component: {fileID: 3382531034244291002}
   m_Layer: 6
   m_Name: Turtle
   m_TagString: Untagged
@@ -30,6 +94,7 @@ Transform:
   m_LocalPosition: {x: 5.514, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8211275711491383311}
   - {fileID: 7815615147595436130}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,22 +120,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &7815615146168975852
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7815615146168975851}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.020486023, y: 0.20349915}
-  m_Size: {x: 0.86615753, y: 0.39893675}
-  m_Direction: 1
 --- !u!114 &7815615146168975854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +141,22 @@ MonoBehaviour:
   walkableLayers:
     serializedVersion: 2
     m_Bits: 128
+--- !u!58 &3382531034244291002
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815615146168975851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.16540314}
+  serializedVersion: 2
+  m_Radius: 0.15849878
 --- !u!1 &7815615146187389244
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +286,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -856504651
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3745163931830953359, guid: bc6d76e7ad041004d82dc211e58fb6e6, type: 3}
@@ -286,7 +351,7 @@ Transform:
   - {fileID: 7815615146187389247}
   - {fileID: 7815615148099114767}
   m_Father: {fileID: 7815615146168975850}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7815615148099114764
 GameObject:
