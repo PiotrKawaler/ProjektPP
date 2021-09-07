@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class CheckpointManager : MonoBehaviour
 {
 
-    [Header("Prefabs")]
-    [SerializeField] GameObject playerPrefab;
+    [Header("InScene")]
+    [SerializeField] GameObject player;
 
     [Header("Transforms")]
     [Tooltip("Uses this transform if left null")]
@@ -113,7 +113,7 @@ public class CheckpointManager : MonoBehaviour
     private GameObject SpawnPlayer()
     {
         
-        if (playerPrefab == null)
+        if (player == null)
         {
             Debug.LogWarning("Failed to spawn player no preafab");
             return null;
@@ -123,8 +123,8 @@ public class CheckpointManager : MonoBehaviour
         var checkpoint = getSavedCheckpoint();
         Vector3 spawnPosition= checkpoint == null? defaultSpawnPositon: checkpoint.SpawnPositon;
 
-        return Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
-
+        player.transform.position = spawnPosition;
+        return player;
 
     }
 

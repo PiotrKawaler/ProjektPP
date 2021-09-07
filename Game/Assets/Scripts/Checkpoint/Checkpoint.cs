@@ -52,6 +52,11 @@ public class Checkpoint : MonoBehaviour
         if (isSelected == false)
         {
             CheckpointManager.Instance?.SetCheckpoint(this);
+            PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.RestoreToFull();
+            }
         }
         
     }
