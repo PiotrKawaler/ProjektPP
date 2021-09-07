@@ -25,10 +25,30 @@ public class CheckpointManager : MonoBehaviour
     public static string CheckpointPlayerPrefKey = "checkpoint";
     public static string CheckpointPlayerPrefDefault = "undefined";
 
-    private static string getPrefKey()
+    private static string getPrefKey(string sceneName)
+    {
+        return CheckpointPlayerPrefKey +"_"+ sceneName;
+    }
+    private static void clearSave(string sceneName)
+    {
+        string key = getPrefKey(sceneName);
+        PlayerPrefs.DeleteKey(key);
+
+    }
+
+    public static void clearSaves(IEnumerable<string> sceneNames)
+    {
+        foreach (var item in sceneNames)
+        {
+            clearSave(item);
+        }
+    }
+
+
+    private static string getCurrentPrefKey()
     {
         Scene activeScene = SceneManager.GetActiveScene();
-        return CheckpointPlayerPrefKey +"_"+ activeScene.name;
+        return CheckpointPlayerPrefKey + "_" + activeScene.name;
     }
 
 
@@ -75,13 +95,13 @@ public class CheckpointManager : MonoBehaviour
 
     private void saveCheckpoint(Checkpoint checkpoint)
     {
-        PlayerPrefs.SetString(CheckpointManager.getPrefKey(), checkpoint.Identifier);
+        PlayerPrefs.SetString(CheckpointManager.getCurrentPrefKey(), checkpoint.Identifier);
     }
 
     private Checkpoint getSavedCheckpoint()
     {
 
-        string identifier = PlayerPrefs.GetString(CheckpointManager.getPrefKey(), CheckpointManager.CheckpointPlayerPrefDefault);
+        string identifier = PlayerPrefs.GetString(CheckpointManager.getCurrentPrefKey(), CheckpointManager.CheckpointPlayerPrefDefault);
         var checkpoints = FindObjectsOfType<Checkpoint>();
 
         Checkpoint check =  checkpoints.Where(c => c.Identifier == identifier).FirstOrDefault();
