@@ -33,7 +33,8 @@ public class SpikeTilemap : MonoBehaviour
 
         if (rigidbody2D == null) return;
 
-        DamageRecieverBase damageReciever = rigidbody2D.GetComponent<DamageRecieverBase>();
+        DamageRecieverBase damageReciever = rigidbody2D?.GetComponent<DamageRecieverBase>();
+        if (damageReciever == null) return;
 
         damageReciever.ReciveDamage(damagePacket, new SpikeDamageSource { pos = rigidbody2D.position });
 

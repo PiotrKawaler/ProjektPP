@@ -1494,7 +1494,7 @@ MonoBehaviour:
   OrbRespawnCooldownText: {fileID: 4272116108913687066}
   OrbRespawnCooldownMultiplierUpgrade: 0.8
   CoinText: {fileID: 6831037291872581884}
-  UpgradeCost: 3
+  UpgradeCost: 5
 --- !u!1 &4272116108913687070
 GameObject:
   m_ObjectHideFlags: 0

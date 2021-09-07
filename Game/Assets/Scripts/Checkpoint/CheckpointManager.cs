@@ -44,6 +44,13 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Clear Savee")]
+    private void clearCurrentSave()
+    {
+        Scene activeScene = SceneManager.GetActiveScene();
+        clearSave(activeScene.name);
+    }
+
 
     private static string getCurrentPrefKey()
     {
@@ -90,6 +97,8 @@ public class CheckpointManager : MonoBehaviour
         }
         checkpoint.SelectCheckpoint();
         saveCheckpoint(checkpoint);
+        OrbGun.Save();
+        ScoreTextScript.Save();
 
     }
 
@@ -118,8 +127,8 @@ public class CheckpointManager : MonoBehaviour
             Debug.LogWarning("Failed to spawn player no preafab");
             return null;
         }
-
-
+        ScoreTextScript.Load();
+        OrbGun.Load();
         var checkpoint = getSavedCheckpoint();
         Vector3 spawnPosition= checkpoint == null? defaultSpawnPositon: checkpoint.SpawnPositon;
 

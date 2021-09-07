@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2189015230918421328}
   - component: {fileID: 6118711841953194015}
   - component: {fileID: 3144307891917286945}
+  - component: {fileID: 5235738599608523063}
   m_Layer: 10
   m_Name: Orb
   m_TagString: Untagged
@@ -114,10 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePacket:
-    damageAmount: 5
+    damageAmount: 2
     damageType: 9
   orbSlotLerpSpeed: 14
-  orbShootLerpSpeed: 16
+  orbShootLerpSpeed: 21
   orbShootTriggerRadius: 0.2
 --- !u!50 &6118711841953194015
 Rigidbody2D:
@@ -156,3 +157,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.17841077
+--- !u!114 &5235738599608523063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189015230918421332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5939b37720007234b9270bb6f4674d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 7398047383977029166, guid: fb8dee9837f648a4bb1a5ed1fa5b1c36, type: 3}

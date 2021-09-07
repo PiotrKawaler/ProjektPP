@@ -7,8 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public void playClick()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void loadClick()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void quitClick()
     {
         Application.Quit(); 
