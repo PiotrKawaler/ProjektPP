@@ -7,6 +7,7 @@ public class DartTrap : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] GameObject arrowPrefab;
+    [SerializeField] GameObject shootEffect;
 
     [Header("Transforms")]
     [SerializeField] Transform fireSource;
@@ -16,11 +17,11 @@ public class DartTrap : MonoBehaviour
     [SerializeField] AgroController agroController;
 
     [Header("Settings")]
-    [SerializeField] float shootCooldown=10;
-    [SerializeField] float arrowVelocity=5;
+    [SerializeField] float shootCooldown = 10;
+    [SerializeField] float arrowVelocity = 5;
 
 
-    private float lastShootTimestamp=0;
+    private float lastShootTimestamp = 0;
 
     private void OnEnable()
     {
@@ -36,7 +37,7 @@ public class DartTrap : MonoBehaviour
         {
             agroController.onAggroEvent -= OnTrapTrigger;
         }
-            
+
     }
 
     private void shootArrow()
@@ -57,13 +58,21 @@ public class DartTrap : MonoBehaviour
     {
         float currentTimestamp = Time.time;
 
-        if(currentTimestamp - lastShootTimestamp> shootCooldown)
+        if (currentTimestamp - lastShootTimestamp > shootCooldown)
         {
             shootArrow();
+            shootEffectPlay();
             lastShootTimestamp = currentTimestamp;
         }
 
 
+    }
+
+    private void shootEffectPlay()
+    {
+        GameObject effect = Instantiate(shootEffect, fireSource.position, fireSource.rotation);
+        effect.GetComponent<ParticleSystem>().Play();
+        Destroy(effect.gameObject, 5f);
     }
 
 

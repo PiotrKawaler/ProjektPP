@@ -10,14 +10,15 @@ public class TurretController : MonoBehaviour, ITurretAnimationSource
 
 
     [Header("Prefabs")]
-    [SerializeField]  private GameObject bulletPrefab=null;
+    [SerializeField] private GameObject bulletPrefab = null;
+    [SerializeField] private GameObject shootEffect = null;
 
     [Header("Transforms")]
-    [SerializeField] private Transform cannonPivot=null;
-    [SerializeField] private Transform shooTransform=null;
+    [SerializeField] private Transform cannonPivot = null;
+    [SerializeField] private Transform shooTransform = null;
 
     [Header("Settings")]
-    public float projectileVelocity=7;
+    public float projectileVelocity = 7;
     public float shootColdown = 3;
     public float angleLerpSpeed = 9;
 
@@ -46,16 +47,16 @@ public class TurretController : MonoBehaviour, ITurretAnimationSource
 
         Vector3 dirUp = new Vector3(-dir.y, dir.x, 0);
 
-        Quaternion rot =Quaternion.LookRotation(Vector3.forward, dirUp);
+        Quaternion rot = Quaternion.LookRotation(Vector3.forward, dirUp);
         targetRotation = rot;
-        
+
     }
 
     ///Returns false if shoot on coldown
     public bool Shoot()
     {
 
-        if(Time.timeSinceLevelLoad - lastShootTimestamp > shootColdown)
+        if (Time.timeSinceLevelLoad - lastShootTimestamp > shootColdown)
         {
             lastShootTimestamp = Time.timeSinceLevelLoad;
             shootEvent?.Invoke();
@@ -65,10 +66,10 @@ public class TurretController : MonoBehaviour, ITurretAnimationSource
         {
             return false;
         }
-        
 
 
-        
+
+
     }
 
 
@@ -78,14 +79,24 @@ public class TurretController : MonoBehaviour, ITurretAnimationSource
         GameObject bulletInstance = Instantiate(bulletPrefab, shooTransform.position, shooTransform.rotation);
 
         var rb = bulletInstance.GetComponent<Rigidbody2D>();
-        rb.velocity=projectileVelocity * shooTransform.right;
+        rb.velocity = projectileVelocity * shooTransform.right;
+
+        
+
     }
 
 
-    
+    private void shootEffectPlay()
+    {
+        GameObject effect = Instantiate(shootEffect, shooTransform.position, shooTransform.rotation);
+        effect.GetComponent<ParticleSystem>().Play();
+        Destroy(effect.gameObject, 5f);
+    }
 
     public void shootAnimCallback()
     {
         shootBullet();
+        //particle effect
+        shootEffectPlay();
     }
 }

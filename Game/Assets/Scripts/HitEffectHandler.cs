@@ -6,34 +6,23 @@ public class HitEffectHandler : MonoBehaviour
 {
 
     public GameObject hitEffect;
+    public bool pickProjectileColor = true;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         hitEffectPlay();
     }
 
-    // void OnTriggerExit2D(Collider2D collider)
-    // {
-    //      if(collider.tag == "Obstacle")
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
-
-
-    // void OnTriggerStay2D(Collider2D collider)
-    // {
-    //      if(collider.tag == "Obstacle")
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
-
     void hitEffectPlay()
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+
+        GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
+        if (pickProjectileColor)
+        {
+            effect.GetComponent<ParticleSystem>().startColor = this.GetComponent<SpriteRenderer>().color;
+        }
         effect.GetComponent<ParticleSystem>().Play();
-        Destroy(effect, 5f);
+        Destroy(effect.gameObject, 5f);
     }
 
     private void OnBecameInvisible()

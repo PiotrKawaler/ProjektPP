@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cleanupTime: 0
+  deathParticleEffect: {fileID: 1882427502519623930, guid: 56c0fd963aef4d94ebde8ff6315cbffa, type: 3}
 --- !u!1 &5175449896313265085
 GameObject:
   m_ObjectHideFlags: 0

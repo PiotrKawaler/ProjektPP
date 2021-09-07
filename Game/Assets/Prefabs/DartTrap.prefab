@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 4870153443486059868, guid: f491aa00f33deb7488ae30181286be13, type: 3}
+  shootEffect: {fileID: 6823084507715574531, guid: 2f5b399f2a23f734197250c20205ddc2, type: 3}
   fireSource: {fileID: 2862704797683999906}
   agroController: {fileID: 2862704797391423074}
   shootCooldown: 5

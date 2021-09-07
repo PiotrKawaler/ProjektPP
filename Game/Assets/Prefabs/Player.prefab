@@ -550,10 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707a14b85e5c47347866c97dec1938b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxOrbCount: 15
   SlotCount: 15
-  OrbRespawnCooldown: 0.8
-  OrbShootStrength: 12
   orbPrefab: {fileID: 2189015230918421332, guid: 11863db50346d714095bbbc3b3c22d42, type: 3}
   orbit: {fileID: 3941870188737664481}
   orbShootSource: {fileID: 4852133694772494993}
@@ -648,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f50fabcb118d245832af564bc7136a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleanupTime: 0
+  cleanupTime: 5
 --- !u!1 &337602047109138063
 GameObject:
   m_ObjectHideFlags: 0
