@@ -10,6 +10,20 @@ public class OrbGun : MonoBehaviour
     public static float OrbRespawnCooldown=1.5f;
     public static float OrbShootStrength = 6;
 
+    public static void Save()
+    {
+        PlayerPrefs.SetInt(nameof(MaxOrbCount), MaxOrbCount);
+        PlayerPrefs.SetFloat(nameof(OrbRespawnCooldown), MaxOrbCount);
+        PlayerPrefs.SetFloat(nameof(OrbShootStrength), MaxOrbCount);
+    }
+    public static void Load()
+    {
+        PlayerPrefs.GetInt(nameof(MaxOrbCount), 3);
+        PlayerPrefs.GetFloat(nameof(OrbRespawnCooldown), 1.5f);
+        PlayerPrefs.GetFloat(nameof(OrbShootStrength), 6);
+    }
+
+
 
     [Header("Refrences")]
     [SerializeField]private GameObject orbPrefab;

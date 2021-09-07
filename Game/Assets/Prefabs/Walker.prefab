@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 5022341211971674390}
   m_Layer: 0
   m_Name: Walker
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 7194923207459086131}
   knockbackBaseStrength: 5
+  velocityMultiplier: 0.15
 --- !u!114 &5950736056691407462
 MonoBehaviour:
   m_ObjectHideFlags: 0

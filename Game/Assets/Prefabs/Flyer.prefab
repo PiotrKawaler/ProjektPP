@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 6627758969460916399}
   m_Layer: 6
   m_Name: Flyer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackCenter: {fileID: 0}
   knockbackBaseStrength: 5
+  velocityMultiplier: 0.15
 --- !u!114 &4403322371554649351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,4 +386,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 14
+  m_Radius: 10

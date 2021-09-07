@@ -239,7 +239,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -856504651
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -539579915749326718, guid: a31d5e982f56ed74d9e5b7c3cd4be08e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -321,7 +321,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -856504651
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 8195469170884960449, guid: a31d5e982f56ed74d9e5b7c3cd4be08e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 8329080979174600887}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,5 +522,5 @@ SortingGroup:
   m_GameObject: {fileID: 1522898658558554654}
   m_Enabled: 1
   m_SortingLayerID: -856504651
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0

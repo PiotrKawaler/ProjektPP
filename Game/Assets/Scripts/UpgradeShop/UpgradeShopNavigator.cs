@@ -10,6 +10,15 @@ public class UpgradeShopNavigator : MonoBehaviour
     private bool interactionAllowed = false;
 
 
+    private void Awake()
+    {
+        if (UpgradeShopPanel == null)
+        {
+            UpgradeShopPanel = FindObjectOfType<UpgradeShopController>().gameObject;
+        }
+
+    }
+
     void Update()
     {
         if (interactionAllowed && Input.GetKeyDown(KeyCode.F))
@@ -37,6 +46,8 @@ public class UpgradeShopNavigator : MonoBehaviour
     private void OpenUpgradePanel()
     {
         Time.timeScale = 0f;
+
+   
         UpgradeShopPanel.GetComponent<UpgradeShopController>().SetOtherUIActiveStatus(false);
         UpgradeShopPanel.SetActive(true);
     }

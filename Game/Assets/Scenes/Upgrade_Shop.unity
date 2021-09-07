@@ -443,10 +443,18 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1203084217523496213, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
+      propertyPath: interactionText
+      value: 
+      objectReference: {fileID: 1882815140}
     - target: {fileID: 3941870188737664481, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
       propertyPath: angleBeetwen
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 7862381905065251156, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 177641532}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
 --- !u!4 &250085590 stripped
@@ -459,19 +467,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 337602047086177977, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
   m_PrefabInstance: {fileID: 250085589}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &250085592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250085591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9491009128c34e4092b3d0e24d691a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 177641532}
 --- !u!114 &250085593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1016412179728132016, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
@@ -483,19 +478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707a14b85e5c47347866c97dec1938b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &250085594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250085591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d167e9a325832640bb510f98f9facfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionText: {fileID: 1882815140}
 --- !u!1 &296841942
 GameObject:
   m_ObjectHideFlags: 0
