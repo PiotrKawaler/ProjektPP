@@ -11,6 +11,8 @@ public class KnockbackReciever : MonoBehaviour
     [SerializeField] Transform knockbackCenter=null;
 
     public float knockbackBaseStrength = 5;
+    [Range(0,1)]
+    public float velocityMultiplier = 0.15f;
     private DamageRecieverBase damageReciever;
     private Rigidbody2D rigidbody2d;
     private void Awake()
@@ -52,7 +54,7 @@ public class KnockbackReciever : MonoBehaviour
 
         Vector2 knockBackVector = (forcedir * 0.3f + Vector2.up * 0.7f) * knockbackBaseStrength;
 
-
+        rigidbody2d.velocity *= velocityMultiplier;
         if (rigidbody2d.isKinematic)
         {
             rigidbody2d.velocity += knockBackVector;

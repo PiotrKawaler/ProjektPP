@@ -85,12 +85,6 @@ public class OrbGunOrbit : MonoBehaviour
 
 
 
-    [ContextMenu("Setup 3 Slots")]
-    private void  setup3()
-    {
-        setupSlots(3);
-    }
-
     [ContextMenu("Clear Slots")]
     private void menuClearSlots()
     {

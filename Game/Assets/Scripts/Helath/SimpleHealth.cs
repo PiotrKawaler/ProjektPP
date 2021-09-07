@@ -10,6 +10,7 @@ public class SimpleHealth : HealthBase
 
     protected override void Awake()
     {
+        currentHealth = MaxHealth;
         base.Awake();
     }
 

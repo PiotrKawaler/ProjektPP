@@ -20,7 +20,8 @@ public class Orb : MonoBehaviour,IDamageSource
 
 
     //Si³a wystrza³u
-    private float orbShootStrength; 
+    private float orbShootStrength;
+    private bool wasUsed = false;
 
     private Transform orbShootSource;
     private ColorSwitcher colorSwitcher;
@@ -50,12 +51,16 @@ public class Orb : MonoBehaviour,IDamageSource
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (wasUsed == true) return;
+
         DamageRecieverBase damageReciever = collision?.attachedRigidbody?.GetComponent<DamageRecieverBase>();
 
         if (damageReciever == null) return;
 
         if (damageReciever.IsValidTarget(damagePacket, this))
         {
+            wasUsed = true;
             damageReciever.ReciveDamage(damagePacket, this);
             Destroy(gameObject);
         }

@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePacket:
-    damageAmount: 5
+    damageAmount: 2
     damageType: 9
   orbSlotLerpSpeed: 14
-  orbShootLerpSpeed: 16
+  orbShootLerpSpeed: 21
   orbShootTriggerRadius: 0.2
 --- !u!50 &6118711841953194015
 Rigidbody2D:

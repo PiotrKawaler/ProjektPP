@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0843185751194344d831ce952041697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 337602047086177977, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
+  player: {fileID: 1985596455}
   originalSpawn: {fileID: 0}
 --- !u!1 &266347569
 GameObject:
@@ -3364,6 +3364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 328100c293d13694f8f7e60b8d643513, type: 3}
+--- !u!1 &1985596455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 337602047086177977, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
+  m_PrefabInstance: {fileID: 2065461658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1997601854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 337602047086177977, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 337602047086177983, guid: c352e61b4ccfeac4098a6fc1333e00f0, type: 3}
       propertyPath: m_CollisionDetection
