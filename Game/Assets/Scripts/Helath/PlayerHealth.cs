@@ -47,4 +47,10 @@ public class PlayerHealth : HealthBase
             }
         }
     }
+
+    public void RestoreToFull()
+    {
+        currentHealth = maxHealth;
+        HealthChangedEvent?.Invoke(currentHealth);
+    }
 }
